@@ -1,3 +1,4 @@
+using System.Collections;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -11,15 +12,27 @@ public class TitleSceneController : MonoBehaviour {
         AnimateLoop();
     }
 
+    bool isLoading = false;
+
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) 
+        if (isLoading) return;
+
+        if (Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("Stage_Select");
+            isLoading = true;
+            StartCoroutine(DelayedSceneLoad());
         }
     }
+
+    IEnumerator DelayedSceneLoad()
+    {
+        yield return new WaitForSeconds(0.1f); // 입력 무시 시간 확보
+        SceneManager.LoadScene("Stage_Select");
+    }
+
     
-    private void AnimateLoop()
+    void AnimateLoop()
     {
         pressText.DOFade(0f, duration)
             .SetLoops(-1, LoopType.Yoyo)
