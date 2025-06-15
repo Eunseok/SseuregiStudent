@@ -22,6 +22,7 @@
 | StageSelect   | 스테이지 별 언락 상태, 별 표시, 포커스 강조 UI 포함 | ![StageSelect](https://github.com/user-attachments/assets/f616a457-2ed4-49de-b229-c9b35fe2870d) |
 | GameScene     | 적 출현 → 문제 풀이 → 발사체 발사 → 결과 판정까지의 게임 핵심 씬 | ![Gameplay](https://github.com/user-attachments/assets/4ac6ccc8-3197-47b0-8d9a-05a73b64a943) |
 | ResultPopup   | 성공/실패에 따른 별 출력 및 버튼 제공 (씬 전환 없이 팝업 처리) | ![Clear](https://github.com/user-attachments/assets/4f4a2c77-08ef-4283-92fc-fa7c2477e167)![Faild](https://github.com/user-attachments/assets/4a26573e-86a5-4882-917a-afef072b2b20) |
+| PuasePoup      | 게임 진행중 일시 정지 기능 제공 |![Pause](https://github.com/user-attachments/assets/731fa4e8-629a-4934-98a5-044ac0011932)|
 
 ---
 
@@ -36,14 +37,11 @@
 
 ## 🎬 애니메이션 적용 예시
 
-| 항목 | 구현 방식 |
-|------|-----------|
-| 캐릭터 기본 상태 | Animator 기반 Idle / Throw 트리거 |
-![Player_idle](https://github.com/user-attachments/assets/2f9bbf4d-a3be-4274-9e84-fb3ccc14bee6)![Player_throw](https://github.com/user-attachments/assets/1a069b2b-15eb-4f62-bb1b-fed90c2de9f1)
-![Enemy_walk](https://github.com/user-attachments/assets/bb400ce2-f216-4f2e-8e9d-ccf7748af9d6)
+| 항목 | 구현 방식 | 스크린샷 |
+|------|-----------|-----|
+| 캐릭터 기본 상태 | Animator 기반 Idle / Throw 트리거 | ![Player_idle](https://github.com/user-attachments/assets/2f9bbf4d-a3be-4274-9e84-fb3ccc14bee6)![Player_throw](https://github.com/user-attachments/assets/1a069b2b-15eb-4f62-bb1b-fed90c2de9f1)![Enemy_walk](https://github.com/user-attachments/assets/bb400ce2-f216-4f2e-8e9d-ccf7748af9d6) |
 | 버튼 클릭 | 색상 전환 + 입력 제한 타이밍 설정 |
-| 발사체 연출 | Animation Event로 동기화된 타이밍 발사 + 포물선 궤적 구현 |
-![Projectile](https://github.com/user-attachments/assets/ca7f2817-d76e-41ea-af32-f9ee07d27e0c)
+| 발사체 연출 | Animation Event로 동기화된 타이밍 발사 + 포물선 궤적 구현 |![Projectile](https://github.com/user-attachments/assets/ca7f2817-d76e-41ea-af32-f9ee07d27e0c) |
 
 ---
 
