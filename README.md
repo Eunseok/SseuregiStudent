@@ -1,4 +1,4 @@
-![Player_idle](https://github.com/user-attachments/assets/1ec694a1-834f-476c-99c6-fa6f7b0eb89c)# 쓰레기 머학생 구구단 미니게임 (Unity TA 포트폴리오)
+# 쓰레기 머학생 구구단 미니게임 (Unity TA 포트폴리오)
 
 > 메타빌 TA 인턴 모집 공고에 맞춰 제작한  
 > **"쓰레기 머학생 구구단 미니게임"** 포트폴리오 프로젝트입니다.  
