@@ -11,8 +11,10 @@ public class EnemyController : MonoBehaviour
     
     [SerializeField] Animator animator;
     [SerializeField] GameObject deathEffect;
-    
-    private Transform playerTarget;
+    [SerializeField] AudioClip hitClip;
+
+    Transform playerTarget;
+    AudioSource audioSource;
     
     bool isHit;
     bool IsDie => health <= 0;
@@ -21,7 +23,12 @@ public class EnemyController : MonoBehaviour
     {
         playerTarget = player;
     }
-    
+
+    void Awake() {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefs.GetInt("sound_on", 1);
+    }
+
     void Update()
     {
         if (isHit || GameManager.Instance.IsGameOver) return; // 피격 중이면 멈춤
@@ -36,7 +43,6 @@ public class EnemyController : MonoBehaviour
 
     public void HitByProjectile() {
         health--;
-        
         isHit = true; 
         animator.SetTrigger(HitHash);
 
@@ -45,6 +51,7 @@ public class EnemyController : MonoBehaviour
             StartCoroutine(DeathRoutine());
         }
 
+        audioSource.PlayOneShot(hitClip);
     }
 
     IEnumerator DeathRoutine() {

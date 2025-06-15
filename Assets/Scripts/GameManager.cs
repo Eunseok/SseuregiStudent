@@ -38,12 +38,21 @@ public class GameManager : MonoBehaviour
     public Transform projectileSpawnPoint;
     [SerializeField] Animator playerAnimator;
     
-    private GameObject pendingProjectile;
-    private GameObject currentEnemy;
+    GameObject pendingProjectile;
+    GameObject currentEnemy;
+    
+    [Header("Audio")]
+    [SerializeField] AudioClip correctClip;
+    [SerializeField] AudioClip wrongClip;
 
+    AudioSource audioSource;
+    
     void Awake()
     {
         if (Instance == null) Instance = this;
+        
+        audioSource = GetComponent<AudioSource>();
+        audioSource.volume = PlayerPrefs.GetInt("sound_on", 1);
     }
 
     void Start()
@@ -125,12 +134,16 @@ public class GameManager : MonoBehaviour
             SetButtonColors(correctBtn: clickedButton);
             playerAnimator.SetTrigger(Throw);
             pendingProjectile = Instantiate(projectilePrefab, projectileSpawnPoint);
+            
+            audioSource.PlayOneShot(correctClip);
         }
         else
         {
             wrongCount++;
             SetButtonColors(wrongBtn: clickedButton);
             Invoke(nameof(GenerateQuestion), questionInterval);
+            
+            audioSource.PlayOneShot(wrongClip);
         }
     }
 
