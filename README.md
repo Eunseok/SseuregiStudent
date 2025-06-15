@@ -16,19 +16,12 @@
 
 ## 🧩 씬 구성 요약
 
-| 씬 이름       | 설명 |
-|--------------|------|
-| TitleScene    | 클릭 시 StageSelect 씬으로 전환되는 메인 화면 |
-![TitleScene](https://github.com/user-attachments/assets/7e4b7aab-05fa-45c5-8606-6cdeee62fd8d)
-
-| StageSelect   | 스테이지 별 언락 상태, 별 표시, 포커스 강조 UI 포함 |
-![StageSelect](https://github.com/user-attachments/assets/f616a457-2ed4-49de-b229-c9b35fe2870d)
-
-| GameScene     | 적 출현 → 문제 풀이 → 발사체 발사 → 결과 판정까지의 게임 핵심 씬 |
-![Gameplay](https://github.com/user-attachments/assets/4ac6ccc8-3197-47b0-8d9a-05a73b64a943)
-
-| ResultPopup   | 성공/실패에 따른 별 출력 및 버튼 제공 (씬 전환 없이 팝업 처리) |
-![Clear](https://github.com/user-attachments/assets/4f4a2c77-08ef-4283-92fc-fa7c2477e167)![Faild](https://github.com/user-attachments/assets/4a26573e-86a5-4882-917a-afef072b2b20)
+| 씬 이름       | 설명 | 스크린샷 |
+|--------------|------|----|
+| TitleScene    | 클릭 시 StageSelect 씬으로 전환되는 메인 화면 | ![TitleScene](https://github.com/user-attachments/assets/7e4b7aab-05fa-45c5-8606-6cdeee62fd8d) |
+| StageSelect   | 스테이지 별 언락 상태, 별 표시, 포커스 강조 UI 포함 | ![StageSelect](https://github.com/user-attachments/assets/f616a457-2ed4-49de-b229-c9b35fe2870d) |
+| GameScene     | 적 출현 → 문제 풀이 → 발사체 발사 → 결과 판정까지의 게임 핵심 씬 | ![Gameplay](https://github.com/user-attachments/assets/4ac6ccc8-3197-47b0-8d9a-05a73b64a943) |
+| ResultPopup   | 성공/실패에 따른 별 출력 및 버튼 제공 (씬 전환 없이 팝업 처리) | ![Clear](https://github.com/user-attachments/assets/4f4a2c77-08ef-4283-92fc-fa7c2477e167)![Faild](https://github.com/user-attachments/assets/4a26573e-86a5-4882-917a-afef072b2b20) |
 
 ---
 
